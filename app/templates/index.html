@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <form action="/events" method="POST">
+        <label for="date">Date: </label>
+        <input type="date" id="date" name="date">
+        <!--  DATE experiment -->
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name">
+        <label for="location">Location: </label>
+        <input type="text" id="location" name="location">
+        <label for="description">Description: </label>
+        <input type="text" id="description" name="description">
+        <label for="guests">Guests: </label>
+        <input type="text" id="guests" name="guests">
+        <input type="submit" value="Add Event">
+    </form>
+  
+
+    {% for event in events %}
+    <div>
+        <p>
+            Date: {{event.date}}
+        </p>    
+        <p>
+            Name of event: {{event.name}}
+        </p>
+        <p> 
+            Location: {{event.location}}
+        </p>
+        <p>
+            Description: {{event.description}}
+        </p>
+        <p>
+            Guests: {{event.guests}}
+        </p>
+        <hr>
+    </div>
+    {% endfor %}
+
+{% endblock %}
