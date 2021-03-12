@@ -22,22 +22,22 @@
     {% for event in events %}
     <div>
         <p>
-            Date: {{event.date}}
+            <span class="title">Date:</span> {{event.date}}
         </p>    
         <p>
-            Name of event: {{event.name}}
+            <span class="title">Name of event:</span> {{event.name}}
         </p>
         <p> 
-            Location: {{event.location}}
+            <span class="title">Location:</span> {{event.location}}
         </p>
         <p>
-            Description: {{event.description}}
+            <span class="title">Description:</span> {{event.description}}
         </p>
         <p>
-            Guests: {{event.guests}}
+            <span class="title">Guests:</span> {{event.guests}}
         </p>
         <p>   
-            Recurring?
+            <span class="title">Recurring?</span>
             {% if event.recurring %} 
             <span> &#10004;</span> 
             {% endif %}
