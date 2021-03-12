@@ -1,20 +1,53 @@
 body {
     font-family: 'Abril Fatface', cursive;
     margin: 0;
-    background-image: url(app/static/aee07bf40c237bfaec5c69ee4ceaabd6.jpeg);
+    background-image: url(rm28-watercolor-kung-160_2.jpeg);
+    background-size: contain;
+}
+
+section {
+    display: grid;
+    grid-template-areas: 'form events';
+    grid-template-columns: 1fr 2fr;
 }
 
 h1 {
     font-size: 50px;
     text-align: center;
-    background-color: rgb(207, 199, 210);
+    background-color: rgb(163, 163, 214);
     margin: 0;
-    color: whitesmoke;
+    color: white;
     padding-bottom: 10px;
     padding-top: 10px;
 }
 
 form {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    grid-area: form;
+    color:rgb(128, 128, 219)
+}
+
+form > input {
+    width: 70%;
+    border-radius: 8px;
+    border:rgb(128, 128, 219) solid 2px;
+    font-family: 'Abril Fatface', cursive;
+    font-weight: lighter;
+
+}
+
+.submit {
+    font-family: 'Abril Fatface', cursive;
+    color: white;
+    font-size: 20px;
+    background-color: rgb(128, 128, 219);
+}
+
+.events {
+    grid-area: events;
 }

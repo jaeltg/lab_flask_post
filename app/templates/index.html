@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+<section>
     <form action="/events" method="POST">
         <label for="date">Date: </label>
         <input type="date" id="date" name="date">
@@ -15,10 +15,10 @@
         <input type="text" id="guests" name="guests">
         <label for="recurring">Recurring?</label>
         <input type="checkbox" id="recurring" name="recurring">
-        <input type="submit" value="Add Event">
+        <input type="submit" value="Add Event" class="submit">
     </form>
   
-
+    <div class="events">
     {% for event in events %}
     <div>
         <p>
@@ -44,7 +44,9 @@
         </p>
        
         <hr>
-    </div>
+    </div>   
     {% endfor %}
+</div>
+</section> 
 
 {% endblock %}
